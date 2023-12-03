@@ -1,0 +1,55 @@
+.clientLists {
+    position: relative;
+    width: 100%;
+    top: 12vh;
+    min-height: 88vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.clientLists .card {
+    width: 100%;
+    height: 150px;
+    background-color: #383838;
+}
+
+.clientLists .card .cardImageArea {
+    height: 100%;
+    width: 20%;
+}
+
+.clientLists .cardImageArea img {
+    height: 140px;
+    max-width: 140px;
+    border-radius: 50%;
+}
+
+.clientLists .card .cardNameArea {
+    height: 100%;
+    width: 20%;
+}
+
+.clientLists .cardNameArea .cardName {
+    font-size: 30px;
+    color: #fff;
+}
+
+.clientLists .card .cardContactDetails {
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    font-size: 20px;
+    color: #fff;
+}
+
+.clientLists .card .cardWorkDetails {
+    flex-direction: column;
+    font-size: 20px;
+    color: #fff;
+    height: 100%;
+    width: 20%;
+}
