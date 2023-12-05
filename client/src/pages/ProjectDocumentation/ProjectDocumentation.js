@@ -3,7 +3,6 @@ import React, { useState, useRef } from 'react'
 import FromData from 'form-data';
 import axios from 'axios';
 import { useReactToPrint } from 'react-to-print';
-import img from "../../assets/accont.png"
 
 export default function ProjectDocumentation() {
 
@@ -22,6 +21,13 @@ export default function ProjectDocumentation() {
             businessPinNo: "",
             businessMobileNumber: "",
             businessEmail: ""
+        }
+    );
+    const [isProjectData, setIsProjectData] = useState(
+        {
+            projectDetails: "ফটো স্টুডিও আইটেম এর বিজনেস, সাবলিমেশন প্রিন্টিং প্রোডাক্ট, মূলত এডস এর জন্য বিজনেস কে রেডি করাটাই মুল উদ্দেশ্য।",
+            projectPagesNumber: "",
+            projectTechnology: "Wordpress (CMS)",
         }
     );
     const [clientProvideList, setClientProvideList] = useState(
@@ -52,6 +58,104 @@ export default function ProjectDocumentation() {
             },
         ]
     );
+    const [isHeaderPageContent, setIsHeaderPageContent] = useState(
+        [
+            {
+                headerPageContent: "লোগো"
+            },
+            {
+                headerPageContent: "মেনু"
+            },
+            {
+                headerPageContent: "কন্টাক্ট বাটন (ডাইরেক্ট কল)"
+            },
+            {
+                headerPageContent: "ইমেইল, ফোননাম্বার এড (টপবা র)"
+            },
+            {
+                headerPageContent: "সোশ্যাল মিডিয়া ইন্টিগ্রেশন (টপবা র)"
+            }
+        ]
+    );
+    const [isFooterPageContent, setIsFooterPageContent] = useState(
+        [
+            {
+                footerPageContent: "লোগো"
+            },
+            {
+                footerPageContent: "শর্ট ডেসক্রিপশন"
+            },
+            {
+                footerPageContent: "ইম্পরট্যান্ট লিঙ্ক"
+            },
+            {
+                footerPageContent: "সোশ্যাল মিডিয়া লিঙ্ক"
+            },
+            {
+                footerPageContent: "টারমস এন্ড কান্ডিশন লিঙ্ক"
+            },
+            {
+                footerPageContent: "প্রাইভেসি পলিসি লিঙ্ক"
+            },
+            {
+                footerPageContent: "কপিরাইট টেক্সট"
+            }
+        ]
+    );
+    const [companyProvideList, setCompanyProvideList] = useState(
+        [
+            {
+                companyProvideData: "Astra / Hallo Elementor Theme"
+            },
+            {
+                companyProvideData: "Elementor Page Builder"
+            },
+            {
+                companyProvideData: "Elementor Pro Plagin"
+            },
+            {
+                companyProvideData: "Woocommerce Plagin"
+            },
+            {
+                companyProvideData: "একটি বি জনে স মে ইল প্রভা ইড করা হবে ।"
+            },
+            {
+                companyProvideData: "ইং রে জি কন্টে ন্ট এর উপর ওয়ে বসা ইট হবে ।"
+            },
+            {
+                companyProvideData: "আমরা বে সি ক কন্টে ন্ট প্রভা ইড করবো"
+            },
+            {
+                companyProvideData: "এছা রা ও প্রয়ো জন অনুসা রে বি ভি ন্ন থি ম প্লা গি ন ব্যা বহা র হতে পা রে ।"
+            },
+        ]
+    );
+    const [termsConditionsList, setTermsConditionsList] = useState(
+        [
+            {
+                termsConditionsData: "যতক্ষণ কা জ চলবে ওয়ে বসা ইট Under maintenance থা কবে ।"
+            },
+            {
+                termsConditionsData: "যতক্ষণ কা জ চলবে আমরা কো নো ভা বে ই কো নো ক্রে ডে নশি য়া ল হস্তা ন্তর করবো না ।"
+            },
+            {
+                termsConditionsData: "উল্লে খি ত কা জ এর বা ইরে এক্সট্রা কা জ এর জন্য নি র্দি ষ্ট টা কা পে করতে হবে ।"
+            },
+            {
+                termsConditionsData: "প্রো জে ক্ট চলা কা লী ন আমা দে র কা ছে থা কা কো ন ক্রে ডে নশি য়া ল অন্য কে উ আমা দে র না জা নি য়ে ব্যা বহা র করতে পা রবে না , অন্য থা য় কো ম্পা নি কো ন দা য়ি ত্ব নে বে না ।"
+            },
+            {
+                termsConditionsData: "সময় মতো পে মে ন্ট করতে হবে ।"
+            },
+            {
+                termsConditionsData: "প্রো জে ক্ট শে ষ হওয়া র ৭ দি নে র মধ্যে আমরা সমস্ত ক্রে ডে নশি য়া ল হস্তা ন্তর করবো ।"
+            },
+            {
+                termsConditionsData: "প্রোজেক্ট এর প্রয়োজনীয় রিসোর্স সময়ম র্স তো আমাদেরকে দিতে হবে। আপনার রিসোর্স দিতে লেট হলে প্রোজেক্ট এর ডেড লাইন মিস করলে কোম্পানি কোনো ভাবে দায়ী থাকবে না।"
+            },
+        ]
+    );
+
     const [isPageList, setIsPageList] = useState(
         [
             {
@@ -140,114 +244,6 @@ export default function ProjectDocumentation() {
             },
         ]
     );
-    const [isHeaderPageContent, setIsHeaderPageContent] = useState(
-        [
-            {
-                headerPageContent: "লোগো"
-            },
-            {
-                headerPageContent: "মেনু"
-            },
-            {
-                headerPageContent: "কন্টাক্ট বাটন (ডাইরেক্ট কল)"
-            },
-            {
-                headerPageContent: "ইমেইল, ফোননাম্বার এড (টপবা র)"
-            },
-            {
-                headerPageContent: "সোশ্যাল মিডিয়া ইন্টিগ্রেশন (টপবা র)"
-            }
-        ]
-    );
-    const [isFooterPageContent, setIsFooterPageContent] = useState(
-        [
-            {
-                footerPageContent: "লোগো"
-            },
-            {
-                footerPageContent: "শর্ট ডেসক্রিপশন"
-            },
-            {
-                footerPageContent: "ইম্পরট্যান্ট লিঙ্ক"
-            },
-            {
-                footerPageContent: "সোশ্যাল মিডিয়া লিঙ্ক"
-            },
-            {
-                footerPageContent: "টারমস এন্ড কান্ডিশন লিঙ্ক"
-            },
-            {
-                footerPageContent: "প্রাইভেসি পলিসি লিঙ্ক"
-            },
-            {
-                footerPageContent: "কপিরাইট টেক্সট"
-            }
-        ]
-    );
-
-    const [isProjectData, setIsProjectData] = useState(
-        {
-            projectDetails: "ফটো স্টুডিও আইটেম এর বিজনেস, সাবলিমেশন প্রিন্টিং প্রোডাক্ট, মূলত এডস এর জন্য বিজনেস কে রেডি করাটাই মুল উদ্দেশ্য।",
-            projectPagesNumber: "",
-            projectTechnology: "Wordpress (CMS)",
-        }
-    );
-
-
-    const [companyProvideList, setCompanyProvideList] = useState(
-        [
-            {
-                companyProvideData: "Astra / Hallo Elementor Theme"
-            },
-            {
-                companyProvideData: "Elementor Page Builder"
-            },
-            {
-                companyProvideData: "Elementor Pro Plagin"
-            },
-            {
-                companyProvideData: "Woocommerce Plagin"
-            },
-            {
-                companyProvideData: "একটি বি জনে স মে ইল প্রভা ইড করা হবে ।"
-            },
-            {
-                companyProvideData: "ইং রে জি কন্টে ন্ট এর উপর ওয়ে বসা ইট হবে ।"
-            },
-            {
-                companyProvideData: "আমরা বে সি ক কন্টে ন্ট প্রভা ইড করবো"
-            },
-            {
-                companyProvideData: "এছা রা ও প্রয়ো জন অনুসা রে বি ভি ন্ন থি ম প্লা গি ন ব্যা বহা র হতে পা রে ।"
-            },
-        ]
-    );
-
-    const [termsConditionsList, setTermsConditionsList] = useState(
-        [
-            {
-                termsConditionsData: "যতক্ষণ কা জ চলবে ওয়ে বসা ইট Under maintenance থা কবে ।"
-            },
-            {
-                termsConditionsData: "যতক্ষণ কা জ চলবে আমরা কো নো ভা বে ই কো নো ক্রে ডে নশি য়া ল হস্তা ন্তর করবো না ।"
-            },
-            {
-                termsConditionsData: "উল্লে খি ত কা জ এর বা ইরে এক্সট্রা কা জ এর জন্য নি র্দি ষ্ট টা কা পে করতে হবে ।"
-            },
-            {
-                termsConditionsData: "প্রো জে ক্ট চলা কা লী ন আমা দে র কা ছে থা কা কো ন ক্রে ডে নশি য়া ল অন্য কে উ আমা দে র না জা নি য়ে ব্যা বহা র করতে পা রবে না , অন্য থা য় কো ম্পা নি কো ন দা য়ি ত্ব নে বে না ।"
-            },
-            {
-                termsConditionsData: "সময় মতো পে মে ন্ট করতে হবে ।"
-            },
-            {
-                termsConditionsData: "প্রো জে ক্ট শে ষ হওয়া র ৭ দি নে র মধ্যে আমরা সমস্ত ক্রে ডে নশি য়া ল হস্তা ন্তর করবো ।"
-            },
-            {
-                termsConditionsData: "প্রোজেক্ট এর প্রয়োজনীয় রিসোর্স সময়ম র্স তো আমাদেরকে দিতে হবে। আপনার রিসোর্স দিতে লেট হলে প্রোজেক্ট এর ডেড লাইন মিস করলে কোম্পানি কোনো ভাবে দায়ী থাকবে না।"
-            },
-        ]
-    );
 
 
 
@@ -280,10 +276,6 @@ export default function ProjectDocumentation() {
     const handlePrint = useReactToPrint({
         content: () => printRef.current,
     });
-
-
-
-
 
 
     const HandleAddPageListInput = () => {
@@ -319,7 +311,7 @@ export default function ProjectDocumentation() {
         setIsPageList(arrVal);
     }
 
-
+    
     const HandleAddHeaderPageContentInput = () => {
         setIsHeaderPageContent([...isHeaderPageContent, { headerPageContent: "" }])
     }
@@ -560,6 +552,10 @@ export default function ProjectDocumentation() {
                             <h1>কোম্পানি কী কী প্রোভাইড করবে</h1>
                         </div>
                         <div className='clientDataInputBoxArea'>
+                            <h2>ব্যাবহৃত টেকনোলজি :</h2>
+                            <input type='email' value={isProjectData.projectTechnology} required onChange={(e) => setIsProjectData({ ...isBusinessData, projectTechnology: e.target.value })}></input>
+                        </div>
+                        <div className='clientDataInputBoxArea'>
                             <div className='lists'>
                                 <button className='btn' onClick={HandleAddCompanyProvideDataInput}>Add</button>
                                 {
@@ -607,7 +603,6 @@ export default function ProjectDocumentation() {
                         <div ref={printRef}>
                             <h1>{customerName}</h1>
                             <h1>{email}</h1>
-
                             <h1>{address}</h1>
                         </div>
                         <button className='btn' onClick={handlePrint}>Print this out!</button>
@@ -617,4 +612,3 @@ export default function ProjectDocumentation() {
         </div>
     )
 }
-
