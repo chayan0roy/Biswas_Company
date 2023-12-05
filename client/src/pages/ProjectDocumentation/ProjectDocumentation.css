@@ -7,6 +7,119 @@
     background-color: #383838;
 }
 
+.projectDocumentation input {
+    font-size: 20px;
+}
+
+.projectDocumentation .projectDocumentationInput {
+    width: 100%;
+    height: auto;
+}
+
+.projectDocumentationInput .clientDataInputBoxArea {
+    width: 100%;
+    padding: 0 15%;
+    margin: 20px 0;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.projectDocumentationInput .clientDataInputBoxArea h2 {
+    width: 30%;
+    font-size: 20px;
+    color: #fff;
+}
+
+.projectDocumentationInput .clientDataInputBoxArea input {
+    width: 70%;
+    height: 40px;
+    padding: 0 2%;
+}
+
+.projectDocumentationInput .clientDataInputBoxArea input:focus {
+    border: none;
+    outline: none;
+}
+
+.projectDocumentationInput .clientDataInputBoxArea input.dateInput,
+.projectDocumentationInput .clientDataInputBoxArea input.numberInput {
+    width: 30%;
+}
+
+
+
+
+.projectDocumentation .headingArea {
+    padding: 0 15%;
+    margin-top: 50px;
+}
+
+.projectDocumentation .headingArea h1 {
+    color: #fff;
+    font-size: 30px;
+}
+
+
+
+
+
+.projectDocumentationInput .lists {
+    padding: 0 15%;
+    width: 100%;
+}
+
+.projectDocumentationInput .lists h1 {
+    font-size: 25px;
+}
+
+.projectDocumentationInput .lists .btn {
+    margin-top: 5px;
+}
+
+.projectDocumentationInput .lists .listInputArea .btn {
+    margin-top: 5px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.projectDocumentationInput .lists .listInputArea {
+    padding: 0 5%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.projectDocumentationInput .lists .listInputArea div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.projectDocumentationInput .lists .listInputArea input {
+    width: 70%;
+    height: 40px;
+    padding: 0 2%;
+}
+
+.projectDocumentationInput .lists .listInputArea input:focus {
+    border: none;
+    outline: none;
+}
+
+.projectDocumentationInput .lists .listInputArea input.dateInput,
+.projectDocumentationInput .lists .listInputArea input.numberInput {
+    width: 30%;
+}
+
+
+
+
+
 .projectDocumentationInput {
     width: 100%;
     height: 100%;
@@ -42,17 +155,6 @@
     position: relative;
 }
 
-.projectDocumentationInput .leftArea .leftArea_image_box .leftArea_input_image {
-    width: 70%;
-    height: 70%;
-}
-
-.projectDocumentationInput .leftArea .leftArea_image_box .leftArea_image_input {
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    opacity: 0;
-}
 
 .projectDocumentationInput .input_box {
     width: 100%;
@@ -72,4 +174,62 @@
     font-size: 20px;
     background-color: blue;
     margin-top: 50px;
+}
+
+
+
+
+
+
+.projectDocumentationInput .headerFooter {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+
+.projectDocumentationInput .headerFooter .leftSide,
+.projectDocumentationInput .headerFooter .rightSide {
+    height: 100%;
+    width: 50%;
+    padding: 0 3%;
+}
+
+.projectDocumentationInput .headerFooter .leftSide .headingArea,
+.projectDocumentationInput .headerFooter .rightSide .headingArea {
+    padding: 0;
+}
+
+.projectDocumentationInput .headerFooter .leftSide .lists,
+.projectDocumentationInput .headerFooter .rightSide .lists {
+    padding: 0 1%;
+    width: 100%;
+}
+
+.projectDocumentationInput .headerFooter .leftSide .lists .listInputArea,
+.projectDocumentationInput .headerFooter .rightSide .lists .listInputArea {
+    padding: 0 1%;
+}
+
+.projectDocumentationInput .headerFooter .leftSide .lists .listInputArea input,
+.projectDocumentationInput .headerFooter .rightSide .lists .listInputArea input {
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+.projectDocumentationInput .clientDataInputBoxArea .lists {
+    padding: 0;
+}
+
+.projectDocumentationInput .clientDataInputBoxArea .lists .clientProvideHeader  {
+    width: 10%;
+}
+.projectDocumentationInput .clientDataInputBoxArea .lists .clientProvideInput {
+    width: 90%;
 }
